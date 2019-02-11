@@ -15,7 +15,7 @@ res =requests.get("https://xkcd.com/"+str(counter))
 while res.status_code ==200:
 	time.sleep(5) 
 	soup = BeautifulSoup(res.text,'html.parser')
-	img_tag = soup.findAll('img')[1]
+	img_tag = soup.findAll('img')[2]
 	try:
 		url = img_tag['src']
 		f_url = "https:" + url
